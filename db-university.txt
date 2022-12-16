@@ -45,12 +45,15 @@ FROM `degrees`
 WHERE `level` = 'magistrale';
 
 7
+tabella departments
 
+SELECT COUNT(id) as departments
+FROM `departments`;
 
 
 8
 tabella teachers
 
-SELECT `name`, `surname`, `phone`
+SELECT COUNT(id) as teacher_phone_null
 FROM `teachers`
 WHERE `phone` IS NULL;
