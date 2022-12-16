@@ -38,5 +38,9 @@ FROM `exams`
 WHERE `date` = '2020-06-20' && `hour` > '14:00:00'
 ORDER BY `hour`;
 
+6
 
+SELECT `name`, `level`
+FROM `degrees`
+WHERE `level` = 'magistrale';
 
