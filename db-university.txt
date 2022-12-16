@@ -44,3 +44,13 @@ SELECT `name`, `level`
 FROM `degrees`
 WHERE `level` = 'magistrale';
 
+7
+
+
+
+8
+tabella teachers
+
+SELECT `name`, `surname`, `phone`
+FROM `teachers`
+WHERE `phone` IS NULL;
