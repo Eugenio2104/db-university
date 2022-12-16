@@ -1,6 +1,6 @@
 
 1
-Dentro la tabella students
+Tabella students
 
 SELECT `name`,`suraname`, `date_of_birth`
 FROM `students`
@@ -8,7 +8,7 @@ WHERE YEAR (`date_of_birth`) = 1990
 ORDER BY `date_of_birth`;
 
 2
-Dentro la tabella courses
+Tabella courses
 
 SELECT `name`, `cfu` 
 FROM `courses` 
@@ -16,8 +16,20 @@ WHERE `cfu` > 10
 ORDER BY `cfu`;
 
 3
+TABELLA students
+
 SELECT `name`, `surname`, `date_of_birth`
 FROM `students`
 WHERE YEAR(date_of_birth) < YEAR(NOW()) - 30
 ORDER BY `date_of_birth`;
+
+4
+tabella courses
+
+SELECT `name`,`year`, `period`
+FROM `courses`
+WHERE `year` = 1 && `period` = 'I semestre';
+
+5
+
 
