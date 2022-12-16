@@ -31,5 +31,12 @@ FROM `courses`
 WHERE `year` = 1 && `period` = 'I semestre';
 
 5
+Tabella exams
+
+SELECT `course_id`, `hour`, `address`, `date`
+FROM `exams`
+WHERE `date` = '2020-06-20' && `hour` > '14:00:00'
+ORDER BY `hour`;
+
 
 
