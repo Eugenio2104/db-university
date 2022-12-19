@@ -20,7 +20,7 @@ TABELLA students
 
 SELECT `name`, `surname`, `date_of_birth`
 FROM `students`
-WHERE YEAR(date_of_birth) < YEAR(NOW()) - 30
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, NOW()) > 30
 ORDER BY `date_of_birth`;
 
 4
@@ -57,3 +57,25 @@ tabella teachers
 SELECT COUNT(id) as teacher_phone_null
 FROM `teachers`
 WHERE `phone` IS NULL;
+
+
+
+
+Esercizi Join
+
+1
+
+SELECT `students`.`name`,`students`.`surname`, `students`.`registration_number` AS `matricola_studente`
+FROM `students`
+JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id`
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia'
+ORDER BY `students`.`surname`;
+
+
+2
+
+SELECT `degrees`.`name`, `degrees`.`level`, `degrees`.`department_id`
+FROM `degrees`
+JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
+WHERE `degrees`.`level` = 'magistrale'
+AND `departments`.`name` = 'Dipartimento di Neuroscienze';
