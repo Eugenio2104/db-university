@@ -117,3 +117,15 @@ JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
 WHERE `departments`.`name` = 'Dipartimento di Matematica';
 
 
+
+Esercizio Group
+
+1
+
+SELECT COUNT(*) AS `numero_iscritti_annuale` , `year`
+FROM `courses`
+GROUP BY `year`;
+
+
+2
+
