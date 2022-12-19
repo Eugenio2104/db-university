@@ -87,3 +87,11 @@ FROM `courses`
 JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
 JOIN `teachers` on `course_teacher`.`teacher_id` = `teachers`.`id`
 WHERE `teachers`.`id` = 44;
+
+4
+
+SELECT `students`.`surname`, `students`.`name`,`degrees`.`name`, `departments`.`name`
+FROM `students`
+JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id`
+JOIN `departments` ON `departments`.`id`= `degrees`.`department_id`
+ORDER BY `students`.`surname`, `students`.`name`;
