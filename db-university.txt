@@ -129,3 +129,6 @@ GROUP BY `year`;
 
 2
 
+SELECT COUNT(*) AS `numero_insegnanti_stesso_ufficio`, `office_address`
+FROM `teachers`
+GROUP BY `office_address`
