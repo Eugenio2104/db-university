@@ -138,3 +138,10 @@ GROUP BY `office_address`
 SELECT AVG(`vote`) AS `media_voto` ,`exam_id`
 FROM `exam_student`
 GROUP BY `exam_id`
+
+4
+
+SELECT COUNT(*) AS `num_corsi_laurea`, `departments`.`name` AS `nome_dipartimento`
+FROM `departments`
+JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`
+GROUP BY `nome_dipartimento`
